@@ -61,7 +61,7 @@ MAIN_PAGE = """\
       <div class="starter-template">
         <h1>Identicon generator</h1>
         <p class="lead">The following is a random indenticon from this service API</p>
-        <img src="/%s?s=20&p=7" />
+        <img src="/%s?s=20&p=7" height="140" width="140" />
       </div>
 
       <p>

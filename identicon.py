@@ -50,7 +50,7 @@ MAIN_PAGE = """\
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li><a href="https://github.com/RCasatta/pidenticon">Github</a></li>
-
+            <li><a href="https://twitter.com/RCasatta">Author</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

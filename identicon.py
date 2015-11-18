@@ -49,7 +49,7 @@ MAIN_PAGE = """\
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="#about">Github</a></li>
+            <li><a href="https://github.com/RCasatta/pidenticon">Github</a></li>
 
           </ul>
         </div><!--/.nav-collapse -->
@@ -66,7 +66,7 @@ MAIN_PAGE = """\
 
       <p>
       <h2>API</h2>
-      <i>http://identicon-1132.appspot.com/[data]?s=[s]&p=[p]&f=[f]<i>
+      <i>http://identicon-1132.appspot.com/[data]?s=[s]&p=[p]&f=[f]<i> <a href="http://identicon-1132.appspot.com/ciao">example</a><br>
       <ul>
           <li><strong>[data]</strong> This data will be hashed with sha256 and the result used to generate the identicon </li>
           <li>[s] (Optional) The size of the identicon smallest unit. Accepted value are from 4 to 8</li>

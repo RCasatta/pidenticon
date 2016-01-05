@@ -66,11 +66,11 @@ MAIN_PAGE = """\
 
       <p>
       <h2>API</h2>
-      <i>http://identicon-1132.appspot.com/[data]?s=[s]&p=[p]&f=[f]<i> <a href="http://identicon-1132.appspot.com/ciao">example</a><br>
+      <i>http://identicon-1132.appspot.com/[data]?s=[s]&p=[p]&f=[f]<i> <a href="http://identicon-1132.appspot.com/random">example</a><br>
       <ul>
-          <li><strong>[data]</strong> This data will be hashed with sha256 and the result used to generate the identicon </li>
-          <li>[s] (Optional) The size of the identicon smallest unit. Accepted value are from 4 to 8</li>
-          <li>[p] (Optional) The pixel size of the smalles unit. Accepted value are from 1 to 20</li>
+          <li><strong>[data]</strong> This data will be hashed with sha256 and the result used to generate the identicon. <br>There is a special case, if [data] equals to "random" it will be generated random data on the server side (useful for demonstration purpose)</li>
+          <li>[p] (Optional) The size of the identicon smallest unit. Accepted value are from 4 to 8</li>
+          <li>[s] (Optional) The pixel size of the smalles unit. Accepted value are from 1 to 20</li>
           <li>[f] (Optional) The output format wich default to png but accept also base64</li>
       </ul>
       </p>
@@ -118,6 +118,8 @@ class Identicon(webapp2.RequestHandler):
         s = self.request.get('s')
         f = self.request.get('f')
         print "p=" + p + " s=" + s + " f=" + f
+        if(identidata == "random") :
+            identidata = str(random.randint(1,2014122214) ) + str(random.randint(1,2014122214) )
         datahash = hashlib.sha256(identidata)
         digest = datahash.digest()
 

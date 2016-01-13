@@ -70,7 +70,7 @@ MAIN_PAGE = """\
       <ul>
           <li><strong>[data]</strong> This data will be hashed with sha256 and the result used to generate the identicon. <br>There is a special case, if [data] equals to "random" it will be generated random data on the server side (useful for demonstration purpose)</li>
           <li>[p] (Optional) The size of the identicon smallest unit. Accepted value are from 4 to 8</li>
-          <li>[s] (Optional) The pixel size of the smalles unit. Accepted value are from 1 to 20</li>
+          <li>[s] (Optional) The pixel size of the smalles unit. Accepted value are from 1 to 30</li>
           <li>[f] (Optional) The output format wich default to png but accept also base64</li>
       </ul>
       </p>
@@ -130,7 +130,7 @@ class Identicon(webapp2.RequestHandler):
 
         height = 5 if p=="" or not RepresentsInt(p) else max(4,min(8,int(p)))
         width = height;
-        mul = 13 if s=="" or not RepresentsInt(s) else max(1,min(20,int(s))) ;
+        mul = 13 if s=="" or not RepresentsInt(s) else max(1,min(30,int(s))) ;
         print "height=" + str(height) + " width=" + str(width) + " mul=" + str(mul)
 
         s = [[0 for col in range(height*mul)] for row in range(width*mul)]
